@@ -11,6 +11,5 @@ export default async function companies(root, args, { ctx }, info) {
   const companies = files
     .filter(filename => filename.includes('.json'))
     .map(filename => getCompany(filename.replace('.json', '')));
-
   return companies;
 }
